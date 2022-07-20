@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.line {
+    @apply font-[500] text-[18px] leading-[22px] text-[#CFCFCF] mb-[8px];
+}

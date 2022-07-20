@@ -4,5 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Packages and Dependencies Installed
 
-### `TailwindCSS`
-### `React Router DOM`
+### `1.) TailwindCSS`
+### `2.) React Router DOM`
+### `3.) Axios`
+### `4.) Material UI`
