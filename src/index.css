@@ -7,25 +7,25 @@
 }
 
 .spinner__one {
-    @apply h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4;
+    @apply h-2.5 bg-[#3A3A3A] rounded-full dark:bg-gray-700 w-48 mb-4;
 }
 
 .spinner__two {
-    @apply h-2 bg-gray-200 rounded-full max-w-[480px] mb-2.5;
+    @apply h-2 bg-[#3A3A3A] rounded-full max-w-[480px] mb-2.5;
 }
 
 .spinner__three {
-    @apply h-2 bg-gray-200 rounded-full mb-2.5;
+    @apply h-2 bg-[#3A3A3A] rounded-full mb-2.5;
 }
 
 .spinner__four {
-    @apply h-2 bg-gray-200 rounded-full max-w-[440px] mb-2.5;
+    @apply h-2 bg-[#3A3A3A] rounded-full max-w-[440px] mb-2.5;
 }
 
 .spinner__five {
-    @apply h-2 bg-gray-200 rounded-full max-w-[460px] mb-2.5;
+    @apply h-2 bg-[#3A3A3A] rounded-full max-w-[460px] mb-2.5;
 }
 
 .spinner__six {
-    @apply h-2 bg-gray-200 rounded-full max-w-[360px];
+    @apply h-2 bg-[#3A3A3A] rounded-full max-w-[360px];
 }
