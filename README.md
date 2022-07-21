@@ -12,7 +12,7 @@ This Website was built with [ React ](https://github.com/facebook/create-react-a
 
 TailwindCSS was used as the main CSS framework used for the styling of the Website.
 
-React Router DOM was use for the routing between different pages on the website.
+React Router DOM was used for the routing between different pages on the website.
 
 Axios was use to fetch the data from the API endpoint given.
 
