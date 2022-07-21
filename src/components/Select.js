@@ -1,9 +1,11 @@
-import React from 'react';
+import React,  { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import axios from 'axios';
+
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -24,7 +26,14 @@ export default function SimpleSelect() {
     setAge(event.target.value);
   };
 
+  const [rides, setRides] = useState();
+  useEffect(() => {
+    axios.get("https://assessment.api.vweb.app/rides")
+    .then(response => setRides(response.data))
+  }, []);
+
   return (
+
     <div>
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel id="demo-simple-select-outlined-label">State</InputLabel>
@@ -39,9 +48,13 @@ export default function SimpleSelect() {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={10}>Nalbari</MenuItem>
-          <MenuItem value={20}>Chandigarh</MenuItem>
-          <MenuItem value={30}>Nagda</MenuItem>
+          {
+            rides ? rides.map((ride, index) => (
+            <div key={index}>
+            <MenuItem value={10}>{ride.state}</MenuItem>
+            </div>
+            )) : null
+          }
         </Select>
       </FormControl>
       <FormControl variant="outlined" className={classes.formControl}>
@@ -57,9 +70,13 @@ export default function SimpleSelect() {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={10}>Himachal Pradesh</MenuItem>
-          <MenuItem value={20}>Jharkhand</MenuItem>
-          <MenuItem value={30}>Odisha</MenuItem>
+          {
+            rides ? rides.map((ride, index) => (
+            <div key={index}>
+            <MenuItem value={10}>{ride.city}</MenuItem>
+            </div>
+            )) : null
+          }
         </Select>
       </FormControl>
     </div>

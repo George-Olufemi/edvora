@@ -16,7 +16,7 @@ const NearestRides = () => {
       <div className="bg-[#292929] h-auto px-[43px] pt-[28px] pb-[100px]">
         <div className="text-white flex justify-between mb-[24px]">
           {/*  */}
-          <div className="flex justify-between items-center">
+          <div className="flex items-center justify-between">
           <Link to="/">
             <div className="mr-[44px] cursor-pointer">
               <h1 className="border-b-2">Nearest rides</h1>
@@ -34,7 +34,7 @@ const NearestRides = () => {
           </Link>
           </div>
           {/*  */}
-          <div className="flex justify-center items-center cursor-pointer">
+          <div className="flex items-center justify-center cursor-pointer">
             <div className="mr-[8px]">
               <img src="/hamburger.png" alt="" />
             </div>
