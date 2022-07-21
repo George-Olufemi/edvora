@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import Spinner from '../components/Spinner';
+import Dropdown from '../components/Dropdown';
+import Skeleton from '../components/Skeleton';
 
 const NearestRides = () => {
   const [rides, setRides] = useState();
@@ -36,7 +38,9 @@ const NearestRides = () => {
             <div className="mr-[8px]">
               <img src="/hamburger.png" alt="" />
             </div>
-            <div><h1>Filters</h1></div>
+            <div>
+                <Dropdown />
+            </div>
           </div>
         </div>
         {/* component */}
@@ -64,7 +68,14 @@ const NearestRides = () => {
               </div>
             </div>
           </div>
-          )) : <Spinner />
+          )) :
+            <>
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Spinner />
+            </> 
         }
         
       </div>
